@@ -1,5 +1,3 @@
-# Challenge-1-Thijs-Fenne
-
 # Welkom op mijn repository van challenge 1
 
 Dit is een SpaceX dashboard
