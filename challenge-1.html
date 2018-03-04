@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge 1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+        <link type="text/css" href="modal.css" rel="stylesheet" />
+        <link type="text/css" href="reset.css" rel="stylesheet" />
+        <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+        <script src="liquidFillGauge.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    </head>
+    <body>
+      
+        <div id="bg"></div>
+       <div class="logo-container">
+           <img src="5842a770a6515b1e0ad75afe.png" alt="Space X Logo">
+       </div>
+              
+        <div class="dashboard">   
+            <div class="card-container">
+                <div class="card">
+                    <div class="front front-1">
+                        <h1>Voertuig informatie</h1>
+                    </div>
+                    <div class="back voertuig-info">
+                        <div class="brandstof">
+                            <a id="brandstofBtn" class="button">Brandstof</a>
+                        </div>
+                        <div class="snelheid">
+                            <a id="snelheidBtn" class="button">Snelheid</a>
+                        </div>
+                        <div class="acceleratie">
+                            <a id="acceleratieBtn" class="button">Acceleratie</a>
+                        </div>
+                        <div class="gforce">
+                            <a id="gforceBtn" class="button">G-Force</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front front-2">
+                        <h1>Voertuig omgeving</h1>
+                    </div>
+                    <div class="back voertuig-omgeving">
+                        <div class="zwaartekracht">
+                            <a id="zwaartekrachtBtn" class="button">Zwaartekracht</a>
+                        </div>
+                        <div class="afstand">
+                            <a id="afstandBtn" class="button">Afstand afgelegd</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front front-3">
+                        <h1>Voorraden</h1>
+                    </div>
+                    <div class="back voorraden">
+                        <div class="eten">
+                            <a id="etenBtn" class="button">Eten</a>
+                        </div>
+                        <div class="drinken">
+                            <a id="drinkenBtn" class="button">Drinken</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="front front-4">
+                        <h1>Tools</h1>
+                    </div>
+                    <div class="back tools">
+                        <div class="zwaartekracht-omzetten">
+                            <a id="zoBtn" class="button">Rekenmachine</a>
+                        </div>
+                        <div class="mars-aarde">
+                            <a id="marsaardeBtn" class="button">Tijd</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <div id="brandstofModal" class="brandstofmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Brandstof</h2>
+               </div>
+               <div class="modal-body fillgauge">
+                   
+                <svg id="fillgauge1" onclick="gauge1.update(NewValue());"></svg>
+
+
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="snelheidModal" class="snelheidmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Snelheid</h2>
+               </div>
+               <div class="modal-body">
+
+                    <div class="speedometer speed-4">
+                        <div class="pointer"></div>
+                    </div>
+                    
+                    <h2>23.856 km/u</h2>
+                    
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="acceleratieModal" class="acceleratiemodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Acceleratie</h2>
+               </div>
+               <div class="modal-body acceleratie-chart">
+                   <canvas id="acceleratieChart" width="200" height="200"></canvas>
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+        
+        <div id="gforceModal" class="gforcemodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">G-Force</h2>
+               </div>
+               <div class="modal-body gforce-chart">
+                   <canvas id="gforceChart" width="200" height="200"></canvas>
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="zwaartekrachtModal" class="zwaartekrachtmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Zwaartekracht</h2>
+               </div>
+               <div class="modal-body zwaartekracht-chart">
+                  
+                  <canvas id="zwaartekrachtChart" width="200" height="200"></canvas>
+                   
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="afstandModal" class="afstandmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Afstand</h2>
+               </div>
+               <div class="modal-body afstand-chart">
+                  
+                  <canvas id="afstandChart" width="200" height="200"></canvas>
+                  
+                  <h2>329.691.337 km</h2>
+                   
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="etenModal" class="etenmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Eten</h2>
+               </div>
+               <div class="modal-body eten-chart">
+                   
+                   <canvas id="etenChart" width="200" height="200"></canvas>
+                    
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="drinkenModal" class="drinkenmodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Drinken</h2>
+               </div>
+               <div class="modal-body drinken-chart">
+                   
+                   <canvas id="drinkenChart" width="200" height="200"></canvas>
+                   
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="zoModal" class="zomodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Rekenmachine</h2>
+               </div>
+               <div class="modal-body">
+                   
+                   <div id="calculator" class="calculator">
+
+                  <button id="clear" class="clear">C</button>
+
+                  <div id="viewer" class="viewer">0</div>
+
+                  <button class="num" data-num="7">7</button>
+                  <button class="num" data-num="8">8</button>
+                  <button class="num" data-num="9">9</button>
+                  <button data-ops="plus" class="ops">+</button>
+
+                  <button class="num" data-num="4">4</button>
+                  <button class="num" data-num="5">5</button>
+                  <button class="num" data-num="6">6</button>
+                  <button data-ops="minus" class="ops">-</button>
+
+                  <button class="num" data-num="1">1</button>
+                  <button class="num" data-num="2">2</button>
+                  <button class="num" data-num="3">3</button>
+                  <button data-ops="times" class="ops">*</button>
+
+                  <button class="num" data-num="0">0</button>
+                  <button class="num" data-num=".">.</button>
+                  <button id="equals" class="equals" data-result="">=</button>
+                  <button data-ops="divided by" class="ops">/</button>
+                </div>
+
+                <button id="reset" class="reset">Reset Universe?</button>
+                   
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+           
+        <div id="marsaardeModal" class="marsaardemodal">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <span class="closeBtn">&times;</span>
+                   <h2 class="modalheader">Tijd</h2>
+               </div>
+               <div class="modal-body klok">
+                   <div id="txt"></div>
+               </div>
+                <div class="modal-footer">
+                    <img class="spacex-modal-footer" src="5842a770a6515b1e0ad75afe.png">
+                </div>
+            </div>
+        </div>
+        
+        <script src="particles.min.js"></script>         
+        <script src="particles.js"></script>
+        <script src="modal.js"></script>
+        <script src="charts.js"></script>
+                   
+        <script language="JavaScript">
+            var gauge1 = loadLiquidFillGauge("fillgauge1", 79);
+            var config1 = liquidFillGaugeDefaultSettings();
+
+            function NewValue(){
+                if(Math.random() > .5){
+                    return Math.round(Math.random()*100);
+                } else {
+                    return (Math.random()*100).toFixed(1);
+                }
+            }
+        </script>
+    </body>
+</html>

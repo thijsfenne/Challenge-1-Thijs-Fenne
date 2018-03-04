@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans');
+
+.front, .back  {
+    font-family: 'Expletus Sans', cursive;
+}
+
+.front h1 {
+    font-size: 1.4em;
+}
+
+body {
+/*    background-image: url(background.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 1440px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1440px;
+    background: linear-gradient(180deg,#000000,#1F1F1F);
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 300px;
+    z-index: 4;
+    filter: brightness(0) invert(1);
+    
+}
+
+.card-container {
+    perspective: 700;
+    margin: 10px;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+
+    color: white;
+    width: 300px;
+    height: 300px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    background: black;
+    border-radius: 10px !important;
+
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.front {
+    text-align: center;
+    line-height: 300px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg); 
+}
+
+/*VOETUIG INFORMATIE*/
+
+.front-1 {
+    background-image: url(voertuig-info.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.voertuig-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.brandstof {
+    background: black;
+    color: white;
+    border-top-left-radius: 10px;
+    background-image: url(fuel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snelheid {
+    background-image: url(space-shuttle-2.jpg);
+    background-repeat: no-repeat;
+    border-top-right-radius: 10px;
+    background-size: cover;
+}
+
+.acceleratie {
+    background-image: url(acceleratie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+}
+
+.gforce {
+    background-image: url(snelheid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 10px;
+}
+
+.brandstof, .snelheid, .acceleratie, .gforce {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+/*    justify-content: space-evenly;*/
+}
+
+/*VOERTUIG OMGEVING*/
+
+.front-2 {
+    background-image: url(space-shuttle-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.voertuig-omgeving {
+    display: grid;
+    color: white;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+
+.zwaartekracht {
+    background-image: url(gracvity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+}
+
+.afstand {
+    background-image: url(afstand.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+}
+
+.zwaartekracht, .afstand, .atmosfeer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+/*VOORRADEN*/
+
+.front-3 {
+    background-image: url(voorraden.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.voorraden {
+    display: grid;
+    color: white;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+
+.eten {
+    background-image: url(eten.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.drinken {
+    background-image: url(drinks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.eten, .drinken {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+/*TOOLS*/
+
+.front-4 {
+    background-image: url(tools.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tools {
+    display: grid;
+    color: white;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+
+.zwaartekracht-omzetten {
+    background-image: url(zwaartekracht-omztten.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mars-aarde {
+    background-image: url(mars-aarde.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.zwaartekracht-omzetten, .mars-aarde {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;  
+}
+
+/*CALCULATOR*/
+
+.warning {
+  background: -webkit-linear-gradient(45deg, #c97874 10%, #463042 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8c5059;
+  font-weight: 400;
+  margin: 0 auto 6em;
+  max-width: 9em;
+}
+
+.calculator {
+  font-size: 28px;
+  margin: 0 auto;
+  width: 10em;
+    font-family: 'Expletus Sans', cursive;
+}
+.calculator::before, .calculator::after {
+  content: " ";
+  display: table;
+}
+.calculator::after {
+  clear: both;
+}
+
+/* Calculator after dividing by zero */
+.broken {
+  -webkit-animation: broken 2s;
+          animation: broken 2s;
+  -webkit-transform: translate3d(0, -2000px, 0);
+          transform: translate3d(0, -2000px, 0);
+  opacity: 0;
+}
+
+.viewer {
+  color: #c97874;
+  float: left;
+  line-height: 3em;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 7.5em;
+  height: 3em;
+}
+
+button {
+  border: 0;
+  background: rgba(0, 0, 0, 0.28);
+  color: #6cacc5;
+  cursor: pointer;
+  float: left;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+button:hover {
+  background: #eee;
+}
+button:focus {
+  outline: 0;
+  /* The value fade-ins that appear */
+}
+button:focus::after {
+  content: attr(data-num);
+  cursor: default;
+  font-size: 100px;
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  text-align: center;
+  margin-left: -24px;
+  opacity: 0;
+  width: 48px;
+}
+
+/* Same as above, modified for operators */
+.ops:focus::after {
+  content: attr(data-ops);
+  margin-left: -210px;
+  width: 420px;
+}
+
+/* Same as above, modified for result */
+.equals:focus::after {
+  content: attr(data-result);
+  margin-left: -300px;
+  width: 600px;
+}
+
+/* Reset button */
+.reset {
+  background: rgba(201, 120, 116, 0.28);
+  color: #c97874;
+  font-weight: 400;
+  margin-left: -77px;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: -20em;
+  left: 50%;
+  width: auto;
+  height: auto;
+  /* When button is revealed */
+}
+.reset:hover {
+  background: #c97874;
+  color: #100a1c;
+}
+.reset.show {
+  top: 20em;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
+}
+
+/* Animations */
+/* Values that appear onclick */
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Division by zero animation */
+@-webkit-keyframes broken {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  15% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  70% {
+    -webkit-transform: translate3d(0, 2000px, 0);
+            transform: translate3d(0, 2000px, 0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+}
+@keyframes broken {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  15% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  25% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  70% {
+    -webkit-transform: translate3d(0, 2000px, 0);
+            transform: translate3d(0, 2000px, 0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+}
+/* Reset button fadein */
+@-webkit-keyframes fadein {
+  0% {
+    top: 20em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    top: 20em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.klok {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#txt {
+    color: white;
+    font-family: 'Expletus Sans', cursive;
+    font-size: 4em;
+    text-align: center;
+}
+
+.speedometer {
+  width: 270px;
+  height: 135px;
+  position: relative;
+  border-radius: 200px 200px 0 0;
+  margin: 20px auto;
+}
+.speedometer:after {
+  background-color: #1F1F1F;
+  width: 20px;
+  height: 10px;
+  left: 50%;
+  margin-left: -10px;
+  border-radius: 20px 20px 0 0;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.speedometer > .pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: 2px;
+  animation: speed-1 0.5s alternate infinite ease-in-out;
+}
+.speedometer > .pointer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 110px 0 0 3px;
+  border-color: #1F1F1F transparent transparent;
+  width: 0;
+  height: 0;
+}
+
+.speedometer.speed-4 {
+  background-color: #eee;
+}
+.speedometer.speed-4 > .pointer {
+  animation-name: speed-4;
+}
+
+@keyframes speed-4 {
+  from {
+    -moz-transform: rotate(230deg);
+    -ms-transform: rotate(230deg);
+    -webkit-transform: rotate(230deg);
+    transform: rotate(230deg);
+  }
+  to {
+    -moz-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    -webkit-transform: rotate(240deg);
+    transform: rotate(240deg);
+  }
+}
+
+    
+@media screen and (min-width: 640px) {
+    body {
+        height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    #bg {
+        max-height: 100vh;    
+    }
+}
+    
+    
+@media screen and (min-width: 740px) {
+    body {
+        height: 100vh;
+    }
+    
+    .card {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .front, .back {
+        width: 350px;
+        height: 350px;
+        line-height: 350px;
+    }
+    
+    #bg {
+        height: 100vh;
+    }
+    
+    .dashboard {
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1480px) {
+    
+    .logo-container img {
+        width: 700px;
+    }
+    
+    body {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .dashboard {
+        min-width: 750px;
+        max-width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,174 @@
+.button {
+    line-height: 150px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 444;
+/*    background-color: red;*/
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.brandstofmodal, .snelheidmodal, .acceleratiemodal, .gforcemodal, .zwaartekrachtmodal, .afstandmodal, .etenmodal, .drinkenmodal, .zomodal, .marsaardemodal {
+    display: none;
+    position: fixed;
+    z-index: 111;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    border-radius: 15px;
+    margin: 28% auto; /*hoe meer procent hoe verder de modal naar beneden gaat*/
+/*    padding: 20px;*/
+    width: 90%; /*media queries*/
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: .7s;
+}
+
+.modal-header h2, .modal-footer h3 {
+    font-family: 'Expletus Sans', cursive;
+    color: #eee;
+    margin-top: 8px;
+    font-size: 1.1em;
+}
+
+.modal-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #1F1F1F;
+    padding: 20px 25px;
+    color: white;
+    font-size: 1.4em;
+/*    text-align: center;*/
+}
+
+.modal-body {
+    padding: 10px 20px;
+    background: #1F1F1F;
+}
+
+#fillgauge1 {
+    width: 300px;
+    height: 250px;
+}
+
+.modal-body p {
+    font-family: 'Expletus Sans', cursive;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+
+}
+
+.modal-footer  {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #1F1F1F;
+    color: white;
+    text-align: center;
+}
+
+.spacex-modal-footer {
+    width: 220px;
+    filter: brightness(0) invert(1);
+}
+
+.eten-chart, .fillgauge, .drinken-chart, .gforce-chart, .acceleratie-chart, .zwaartekracht-chart, .afstand-chart {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.modal-body h2 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.closeBtn {
+    right: 0;
+    color: #eee;
+    float: right;
+/*    padding-right: 8px;*/
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;   
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 740px) {
+    .modal-content {
+        width: 640px;
+        margin: 20% auto;
+    }
+    
+    .button {
+        line-height: 175px;
+        font-size: 1.3em;
+    }
+}    
+
+@media screen and (min-width: 1480px) {
+    .modal-content {
+        width: 640px;
+        margin: 13.5% auto;
+    }
+    
+    #fillgauge1 {
+        width: 600px;
+        height: 300px;
+    }
+
+    .fillgauge {
+        max-width: 600px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
