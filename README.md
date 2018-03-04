@@ -2,4 +2,4 @@
 
 Dit is een SpaceX dashboard
 
-Wil je mijn dashboard zien, klik dan [hier](https://thijsfenne.github.io/Challenge-1-Thijs-Fenne/).
+Wil je mijn dashboard zien, klik dan [hier](https://thijsfenne.github.io/Challenge-1-Thijs-Fenne/)..
