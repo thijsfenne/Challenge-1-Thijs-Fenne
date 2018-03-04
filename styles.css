@@ -99,7 +99,7 @@ body {
 /*VOETUIG INFORMATIE*/
 
 .front-1 {
-    background-image: url(voertuig-info.jpg);
+    background-image: url(img/voertuig-info.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -114,27 +114,27 @@ body {
     background: black;
     color: white;
     border-top-left-radius: 10px;
-    background-image: url(fuel.jpg);
+    background-image: url(img/fuel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .snelheid {
-    background-image: url(space-shuttle-2.jpg);
+    background-image: url(img/space-shuttle-2.jpg);
     background-repeat: no-repeat;
     border-top-right-radius: 10px;
     background-size: cover;
 }
 
 .acceleratie {
-    background-image: url(acceleratie.jpg);
+    background-image: url(img/acceleratie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom-left-radius: 10px;
 }
 
 .gforce {
-    background-image: url(snelheid.jpg);
+    background-image: url(img/snelheid.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom-right-radius: 10px;
@@ -151,7 +151,7 @@ body {
 /*VOERTUIG OMGEVING*/
 
 .front-2 {
-    background-image: url(space-shuttle-3.jpg);
+    background-image: url(img/space-shuttle-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -164,7 +164,7 @@ body {
 }
 
 .zwaartekracht {
-    background-image: url(gracvity.jpg);
+    background-image: url(img/gracvity.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -172,7 +172,7 @@ body {
 }
 
 .afstand {
-    background-image: url(afstand.jpg);
+    background-image: url(img/afstand.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -189,7 +189,7 @@ body {
 /*VOORRADEN*/
 
 .front-3 {
-    background-image: url(voorraden.jpg);
+    background-image: url(img/voorraden.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -202,7 +202,7 @@ body {
 }
 
 .eten {
-    background-image: url(eten.jpg);
+    background-image: url(img/eten.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -211,7 +211,7 @@ body {
 }
 
 .drinken {
-    background-image: url(drinks.jpg);
+    background-image: url(img/drinks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -229,7 +229,7 @@ body {
 /*TOOLS*/
 
 .front-4 {
-    background-image: url(tools.jpg);
+    background-image: url(img/tools.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -242,7 +242,7 @@ body {
 }
 
 .zwaartekracht-omzetten {
-    background-image: url(zwaartekracht-omztten.jpg);
+    background-image: url(img/zwaartekracht-omztten.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -251,7 +251,7 @@ body {
 }
 
 .mars-aarde {
-    background-image: url(mars-aarde.jpg);
+    background-image: url(img/mars-aarde.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
